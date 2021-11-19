@@ -10,7 +10,7 @@
   opacity: 0;
   visibility: hidden; // not going with display none, then we cannot animate it.
   transition: all 0.3s;
-
+  backdrop-filter: blur(10px);
   &__content {
     @include abscenter;
     width: 75%;
@@ -36,6 +36,10 @@
   &__img {
     display: block;
     width: 100%;
+
+    @include respond(small-phone) {
+      height: 28rem;
+    }
   }
   &__text {
     font-size: 1.4rem;
